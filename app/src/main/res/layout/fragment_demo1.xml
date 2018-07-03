@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="名前"
+            android:textStyle="bold" />
+
+        <EditText android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"/>
+
+        <TextView android:id="@+id/tvMailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="メールアドレス"
+            android:textStyle="bold"/>
+
+        <EditText android:id="@+id/inputMailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="email address"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"/>
+
+        <TextView android:id="@+id/tvAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="年齢"
+            android:textStyle="bold"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/spinner_age"
+            android:layout_marginTop="5dp"></Spinner>
+
+        <TextView android:id="@+id/tvPrefecture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="都道府県"
+            android:textStyle="bold"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/spinner_prefecture"
+            android:layout_marginTop="5dp"></Spinner>
+
+        <TextView android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="問い合わせタイトル"
+            android:textStyle="bold" />
+
+        <EditText android:id="@+id/inputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="title"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"/>
+
+        <TextView android:id="@+id/tvContents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="問い合わせ内容"
+            android:textStyle="bold"/>
+
+        <EditText android:id="@+id/inputContents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="contents"
+            android:maxLines="3"
+            android:layout_marginTop="5dp"/>
+        <FrameLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+        <Button android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="送信" />
+    </LinearLayout>
+</ScrollView>

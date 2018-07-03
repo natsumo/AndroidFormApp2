@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/tvMailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="メールアドレス"
+        android:textStyle="bold"/>
+
+    <EditText android:id="@+id/inputMailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="email address"
+        android:maxLines="1"
+        android:layout_below="@id/tvMailAddress"/>
+
+    <Button android:id="@+id/btnSearchMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/inputMailAddress"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="検索" />
+
+    <TextView android:id="@+id/tvPrefecture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/btnSearchMail"
+        android:text="都道府県"
+        android:textStyle="bold"/>
+    <Spinner
+        android:id="@+id/spinner_prefecture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:layout_below="@id/tvPrefecture">
+    </Spinner>
+
+    <Button android:id="@+id/btnSearchPrefecture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/spinner_prefecture"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="検索"
+        android:layout_centerHorizontal="true"/>
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <TextView android:id="@+id/tvResultCount"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/btnSearchPrefecture"
+        android:visibility="invisible"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:text="全件検索結果：0件"
+        android:textStyle="bold"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="272dp"
+        android:scrollbars="vertical" />
+</RelativeLayout>
