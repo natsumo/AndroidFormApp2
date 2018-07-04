@@ -87,7 +87,7 @@ public class Demo32Fragment extends Fragment {
                             @Override
                             public void done(List<NCMBObject> list, NCMBException e) {
                                 // remove progress
-                                if (mProgressBar != null) {
+                                if (mProgressBar != null && mProgressBar.isAdded()) {
                                     getFragmentManager().beginTransaction().remove(mProgressBar).commitAllowingStateLoss();
                                 }
 

@@ -48,7 +48,7 @@ public class Demo2Fragment extends Fragment {
             Mbaas.getAllData(new FindCallback<NCMBObject>() {
                 @Override
                 public void done(List<NCMBObject> list, NCMBException e) {
-                    if (mProgressBar != null) {
+                    if (mProgressBar != null && mProgressBar.isAdded()) {
                         getFragmentManager().beginTransaction().remove(mProgressBar).commitAllowingStateLoss();
                     }
 
